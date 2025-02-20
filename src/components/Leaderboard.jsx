@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import LeaderboardData from "../utils/LeaderboardData"
 import LeaderboardTable from './LeaderboardTable';
 
@@ -77,6 +77,12 @@ const Leaderboard = () => {
     const handleCancelAddUser = () => {
         setIsAddNewUserClicked(false);
     }
+
+    useEffect(() => {
+        // By default, sort users by name 
+        const sortedUsers = [...users].sort((a, b) => a.name.localeCompare(b.name));
+        setUsers(sortedUsers);
+    }, [])
 
     return (
         <div className='leaderboard-section'>

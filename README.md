@@ -18,3 +18,5 @@ This is a leaderboard application built with React using Vite. The application a
  - npm install  # or yarn install
  - Start the development server
  - npm run dev  # or yarn dev
+
+3. Deployed application Url - https://kashishbansal8.github.io/leaderboard-application/
